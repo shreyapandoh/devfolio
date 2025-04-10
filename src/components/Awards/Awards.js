@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
-import './NotFound.css';
+import './Awards.css';
 
 const Awards = () => {
   const { darkMode } = useSelector((state) => state.theme);

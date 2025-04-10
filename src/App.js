@@ -10,7 +10,7 @@ import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Experience from './components/Projects/Experience/Experience';
 import Contact from './components/Contact/Contact';
-import NotFound from './components/NotFound/NotFound';
+import Awards from './components/Awards/Awards';
 
 // Actions
 import { fetchProjects } from './redux/slices/projectsSlice';
@@ -43,7 +43,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<Awards />} />
           </Routes>
         </main>
         <Footer />
