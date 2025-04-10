@@ -1,0 +1,122 @@
+.project-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .light .project-card {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .project-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .project-links a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .light .project-links a {
+    color: #555;
+  }
+  
+  .dark .project-links a {
+    color: #bbb;
+  }
+  
+  .project-links a:hover {
+    color: var(--primary-light);
+  }
+  
+  .dark .project-links a:hover {
+    color: var(--primary-dark);
+  }
+  
+  .project-description {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .project-language,
+  .project-framework {
+    font-weight: 500;
+  }
+  
+  .light .project-language,
+  .light .project-framework {
+    color: #555;
+  }
+  
+  .dark .project-language,
+  .dark .project-framework {
+    color: #bbb;
+  }
+  
+  .project-stats {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .project-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .light .project-stat {
+    color: #666;
+  }
+  
+  .dark .project-stat {
+    color: #aaa;
+  }
+  
+  .projects-loading {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .project-showcase {
+      grid-template-columns: 1fr;
+    }
+  }
+  

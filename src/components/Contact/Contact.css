@@ -1,0 +1,141 @@
+.contact-section {
+    min-height: calc(100vh - 170px);
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+  }
+  
+  .light .contact-icon {
+    background-color: rgba(98, 0, 234, 0.1);
+    color: var(--primary-light);
+  }
+  
+  .dark .contact-icon {
+    background-color: rgba(187, 134, 252, 0.1);
+    color: var(--primary-dark);
+  }
+  
+  .contact-details h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .contact-details a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .light .contact-details a {
+    color: var(--text-light);
+  }
+  
+  .dark .contact-details a {
+    color: var(--text-dark);
+  }
+  
+  .contact-details a:hover {
+    color: var(--primary-light);
+  }
+  
+  .dark .contact-details a:hover {
+    color: var(--primary-dark);
+  }
+  
+  .contact-form-container {
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  
+  .light .contact-form-container {
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .contact-form-container {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-form .btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .form-status {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .form-status.success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+  }
+  
+  .form-status.error {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+  }
+  
+  @media (max-width: 992px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .contact-info {
+      text-align: center;
+    }
+    
+    .contact-method {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .contact-section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    
+    .contact-form-container {
+      padding: 1.5rem;
+    }
+  }

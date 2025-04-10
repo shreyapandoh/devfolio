@@ -1,0 +1,153 @@
+.experience-section {
+    min-height: calc(100vh - 170px);
+    padding-bottom: 80px;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 40px;
+    margin-top: 50px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+  }
+
+  .timeline-content img{
+    margin-right: 50px;
+    border-radius: 20px;
+  }
+  
+  .light .timeline::before {
+    background-color: rgba(98, 0, 234, 0.3);
+  }
+  
+  .dark .timeline::before {
+    background-color: rgba(187, 134, 252, 0.3);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -46px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  
+  .light .timeline-dot {
+    background-color: var(--primary-light);
+    box-shadow: 0 0 0 4px rgba(98, 0, 234, 0.2);
+  }
+  
+  .dark .timeline-dot {
+    background-color: var(--primary-dark);
+    box-shadow: 0 0 0 4px rgba(187, 134, 252, 0.2);
+  }
+  
+  .timeline-date {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .light .timeline-date {
+    color: var(--primary-light);
+  }
+  
+  .dark .timeline-date {
+    color: var(--primary-dark);
+  }
+  
+  .timeline-content {
+    padding: 1.8rem;
+    border-radius: 10px;
+  }
+  
+  .light .timeline-content {
+    background-color: #bb389017;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .timeline-content {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .timeline-title {
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .timeline-company {
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+  }
+  
+  .light .timeline-company {
+    color: #555;
+  }
+  
+  .dark .timeline-company {
+    color: #bbb;
+  }
+  
+  .timeline-description {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .timeline-achievements {
+    margin: 0 0 1.5rem 0;
+    padding-left: 1.2rem;
+  }
+  
+  .timeline-achievements li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+  }
+  
+  .timeline-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  span.tech-tag.title {
+    background: #6200ea;
+    color: white;
+    padding: 0.5rem;
+}
+  
+  @media (max-width: 768px) {
+    .timeline {
+      padding-left: 30px;
+    }
+    
+    .timeline-dot {
+      left: -36px;
+      width: 12px;
+      height: 12px;
+    }
+    
+    .timeline-content {
+      padding: 1.3rem;
+    }
+  }
+  
