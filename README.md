@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Modern Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive portfolio website built with React, featuring smooth animations, glassmorphism effects, and dynamic theme switching.
 
-## Available Scripts
+![Portfolio Screenshot](screenshot.png)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Modern UI Design** with gradient effects and glassmorphism components
+- **Responsive Layout** that works on all devices
+- **Dark/Light Mode** with seamless transitions
+- **Animated Components** using Framer Motion
+- **Dynamic Project Display** fetched from GitHub API
+- **Experience Timeline** showcasing professional history
+- **Contact Form** with validation and submission handling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend Framework**: React
+- **State Management**: Redux
+- **Routing**: React Router
+- **Animations**: Framer Motion
+- **Styling**: CSS with custom properties
+- **Icons**: React Icons
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14.0.0 or later)
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/portfolio-website.git
+   cd portfolio-website
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
+    npm install
+    # or
+    yarn install
 
-### `npm run eject`
+3. Start the development server
+    npm start
+    # or
+    yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open http://localhost:3000 in your browser
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+src/
+├── assets/              # Images and static files
+├── components/          # React components
+│   ├── About/           # About page components
+│   ├── Contact/         # Contact page components
+│   ├── Experience/      # Experience page components
+│   ├── Home/            # Home page components
+│   ├── Projects/        # Projects page components
+│   ├── Layout/          # Layout components (Header, Footer)
+│   └── UI/              # Reusable UI components
+├── redux/               # Redux store and slices
+├── hooks/               # Custom React hooks
+├── utils/               # Utility functions
+├── App.js               # Main app component
+└── index.js             # Entry point
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Customisations
 
-## Learn More
+#### Projects
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Projects are fetched from GitHub. Update the GitHub username in src/redux/slices/projectsSlice.js:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+export const fetchGithubProjects = createAsyncThunk(
+  'projects/fetchGithubProjects',
+  async () => {
+    const response = await fetch('https://api.github.com/users/YOUR_GITHUB_USERNAME/repos');
+    // ...
+  }
+);
 
-### Code Splitting
+#### Experiences
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Edit your work experiences in src/redux/slices/experiencesSlice.js:
 
-### Analyzing the Bundle Size
+const initialState = {
+  experiences: [
+    {
+      id: 1,
+      title: 'Senior Developer',
+      company: 'Company Name',
+      duration: 'Jan 2022 - Present',
+      description: 'Your role description...',
+      technologies: ['React', 'Node.js', 'MongoDB'],
+    },
+    // Add more experiences
+  ],
+};
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgement
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React Icons - https://react-icons.github.io/react-icons/
+- Framer Motion - https://www.framer.com/motion/
+- Inspiration for glassmorphism design - https://ui.glass/

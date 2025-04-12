@@ -104,7 +104,7 @@ const Contact = () => {
                   </div>
                   <div className="contact-details">
                     <h3>Email</h3>
-                    <a href="mailto:your-email@example.com">your-email@example.com</a>
+                    <a href="mailto:shreyapandoh04@gmail.com">shreyapandoh04@gmail.com</a>
                   </div>
                 </div>
 
@@ -115,7 +115,7 @@ const Contact = () => {
                   <div className="contact-details">
                     <h3>LinkedIn</h3>
                     <a href="https://www.linkedin.com/in/shreya-pandoh/" target="_blank" rel="noopener noreferrer">
-                      linkedin.com/in/your-linkedin
+                      linkedin.com/in/shreya-pandoh
                     </a>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                   <div className="contact-details">
                     <h3>GitHub</h3>
                     <a href="https://github.com/shreyapandoh" target="_blank" rel="noopener noreferrer">
-                      github.com/your-github
+                      github.com/shreyapandoh
                     </a>
                   </div>
                 </div>
