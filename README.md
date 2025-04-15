@@ -2,7 +2,7 @@
 
 A responsive portfolio website built with React, featuring smooth animations, glassmorphism effects, and dynamic theme switching.
 
-![Portfolio Screenshot](screenshot.png)
+![Portfolio Screenshot]('/assets/screenshot.png')
 
 ## Features
 
@@ -51,6 +51,7 @@ A responsive portfolio website built with React, featuring smooth animations, gl
 
 ### Project Structure
 
+```
 src/
 ├── assets/              # Images and static files
 ├── components/          # React components
@@ -66,6 +67,7 @@ src/
 ├── utils/               # Utility functions
 ├── App.js               # Main app component
 └── index.js             # Entry point
+```
 
 ### Customisations
 
@@ -73,6 +75,7 @@ src/
 
 Projects are fetched from GitHub. Update the GitHub username in src/redux/slices/projectsSlice.js:
 
+```
 export const fetchGithubProjects = createAsyncThunk(
   'projects/fetchGithubProjects',
   async () => {
@@ -80,11 +83,13 @@ export const fetchGithubProjects = createAsyncThunk(
     // ...
   }
 );
+```
 
 #### Experiences
 
 Edit your work experiences in src/redux/slices/experiencesSlice.js:
 
+```
 const initialState = {
   experiences: [
     {
@@ -98,6 +103,7 @@ const initialState = {
     // Add more experiences
   ],
 };
+```
 
 ## Acknowledgement
 
